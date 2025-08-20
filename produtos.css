@@ -10,14 +10,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+nav {
+	/*barra de navegação*/
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(136, 136, 136, 0.473);
+	box-shadow: 10px 0px 10px 4px rgb(0, 0, 0);
+}
+.logo {
+	/*div da logo*/
+	width: 100px;
+	margin-left: 20px;
+	
+}
+.logo img {
+	/*img dentro da div da logo*/
+	border-radius: 100px;
+	width: 100%;
+	height: 100%;
+}
+ul {
+	/*lista da barra de nav*/
+	height: 60px;
+	width: 500px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.menu-item {
+	/*itens da lista da barra de nav*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 40px;
+	background-color: rgb(54, 30, 23);
+	font-size: large;
+	border-radius: 12px;
+}
+a {
+	/*estilos dos links da barra de nav*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	border-radius: 12px;
 
 }
+a:hover {
+	color: rgb(240, 174, 212);
+	box-shadow: rgb(197, 196, 196) 0px 8px 8px;
+	transition: 0.4s;
+}
+
+
 
 /*container da tela global*/
 
 .main {
     /*div do conteúdo da tela*/
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 236, 236);
     width: 50%;
     height: 98%;
     border-radius: 15px;
@@ -27,6 +88,7 @@
     scroll-behavior: smooth;
     overflow-y: scroll;
     border: solid 5px;
+    margin-top: 10px;
 }
 
 .catalogo {
