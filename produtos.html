@@ -8,6 +8,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="produtos.css">
 	<title>Menu</title>
 </head>
@@ -17,6 +19,7 @@
 		<nav>
 			<div class="logo"><img src="../aitividade_paulo/img/logo.png" alt=""></div>
 			<ul>
+				<li class="menu-item"><a href="index.html">Home</a></li>
 				<li class="menu-item"><a href="">Login</a></li>
 				<li class="menu-item"><a href="">Contato </a></li>
 				<li class="menu-item"><a href="produtos.html">Produtos</a></li>
@@ -24,8 +27,16 @@
 		</nav>
 
 		<div class="main">
+			<!-- filtragem de categorias -->
+			<div class="dropdown">
+				<button onclick="myFunction()" id="dropbtn" class="dropbtn fa fa-bars w3-text-black w3-xxlarge"></button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#doces">Doces</a>
+					<a href="#hamburguer">Hambúrgueres</a>
+				</div>
+			</div>
 
-			<div class="categoria"><!--div pra separar o titulo das categorias-->
+			<div class="categoria" id="doces"><!--div pra separar o titulo das categorias-->
 				<h1 class="chewy-regular">Doces e Sorvetes</h1>
 				<h3 style="font-size: 20px;">Gourmet</h3>
 			</div>
@@ -70,9 +81,56 @@
 						<button> Comprar </button>
 					</div>
 				</div>
+				<!-- categoria de hambúrguer -->
+				<div class="categoria" id="hamburguer"><!--div pra separar o titulo das categorias-->
+					<h1 class="chewy-regular">Hambúrgueres</h1>
+					<h3 style="font-size: 20px;"></h3>
+				</div>
+				<div class="item"><img src="../aitividade_paulo/img/xbacon.png" alt="">
+					<div class="infos">
+						<h2 class="yanone-kaffeesatz">X-Bacon</h2>
+						<p>
+							R$30.00
+						</p>
+						<button> Comprar </button>
+					</div>
+				</div>
+				<div class="item"><img src="../aitividade_paulo/img/onion.png" alt="">
+					<div class="infos">
+						<h2 class="yanone-kaffeesatz">hambúrguer onions</h2>
+						<p>
+							R$28.99
+						</p>
+						<button> Comprar </button>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</div>
+	<script>
+		function myFunction() {
+			// garante q toda vez q recarregue a pg ela volte ao topo
+			window.onload = function () {
+				window.scrollTo(0, 0);
+			};
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function (event) {
+			if (!event.target.matches('#dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
 </body>
 
 </html>
